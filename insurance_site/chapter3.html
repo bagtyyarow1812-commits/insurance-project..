@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Глава 3. Современность страхования в России | Междисциплинарный проект</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #f8fafc;
+            color: #1e293b;
+            line-height: 1.5;
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #0f2b4b, #1e3a5f);
+            color: white;
+            padding: 32px 0;
+            border-bottom: 4px solid #f5b041;
+        }
+
+        .header .container {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .header h1 {
+            font-size: 1.8rem;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+        }
+
+        .header .subtitle {
+            font-size: 1rem;
+            opacity: 0.9;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px 24px;
+        }
+
+        .header .subtitle i {
+            margin-right: 6px;
+            color: #f5b041;
+        }
+
+        .nav {
+            background: white;
+            border-bottom: 1px solid #e2e8f0;
+            padding: 16px 0;
+        }
+
+        .nav ul {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 24px;
+            justify-content: center;
+        }
+
+        .nav a {
+            text-decoration: none;
+            color: #1e3a5f;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .nav a:hover {
+            color: #f5b041;
+        }
+
+        .project-title {
+            text-align: center;
+            margin: 48px 0 24px;
+        }
+
+        .project-title h2 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: #0f2b4b;
+            line-height: 1.2;
+        }
+
+        .content {
+            background: white;
+            border-radius: 32px;
+            padding: 40px;
+            margin: 32px 0;
+            box-shadow: 0 10px 30px -10px rgba(0,0,0,0.05);
+            border: 1px solid #e2e8f0;
+        }
+
+        .content h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #0f2b4b;
+            margin-bottom: 24px;
+            border-bottom: 3px solid #f5b041;
+            padding-bottom: 12px;
+        }
+
+        .content h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #1e3a5f;
+            margin: 32px 0 16px;
+        }
+
+        .content h4 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #0f2b4b;
+            margin: 24px 0 12px;
+        }
+
+        .content p {
+            margin-bottom: 16px;
+            color: #334155;
+        }
+
+        .content ul, .content ol {
+            margin: 16px 0 24px 24px;
+            color: #334155;
+        }
+
+        .content li {
+            margin-bottom: 8px;
+        }
+
+        .content strong {
+            color: #1e3a5f;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 24px 0;
+            font-size: 0.95rem;
+        }
+
+        th {
+            background: #f1f5f9;
+            font-weight: 600;
+            color: #0f2b4b;
+            padding: 12px;
+            text-align: left;
+            border: 1px solid #e2e8f0;
+        }
+
+        td {
+            padding: 10px 12px;
+            border: 1px solid #e2e8f0;
+            vertical-align: top;
+        }
+
+        tr:nth-child(even) {
+            background: #f8fafc;
+        }
+
+        .btn-more {
+            display: inline-block;
+            background: #f5b041;
+            color: #0f2b4b;
+            font-weight: 600;
+            padding: 12px 28px;
+            border-radius: 40px;
+            text-decoration: none;
+            margin-top: 16px;
+            transition: background 0.2s, transform 0.1s;
+            box-shadow: 0 4px 8px rgba(245,176,65,0.2);
+        }
+
+        .btn-more i {
+            margin-left: 8px;
+        }
+
+        .btn-more:hover {
+            background: #e59e30;
+            transform: scale(1.02);
+        }
+
+        .footer {
+            background: #0f2b4b;
+            color: white;
+            padding: 32px 0;
+            margin-top: 60px;
+            border-top: 4px solid #f5b041;
+        }
+
+        .footer .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        .footer a {
+            color: #f5b041;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 600px) {
+            .nav ul {
+                gap: 12px;
+            }
+            .content {
+                padding: 20px;
+            }
+            .project-title h2 {
+                font-size: 1.6rem;
+            }
+            table {
+                font-size: 0.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Шапка -->
+    <header class="header">
+        <div class="container">
+            <h1>МИНИСТЕРСТВО НАУКИ И ВЫСШЕГО ОБРАЗОВАНИЯ РФ</h1>
+            <div class="subtitle">
+                <span><i class="fas fa-university"></i> ФГБОУ ВО «Астраханский государственный университет им. В.Н. Татищева»</span>
+                <span><i class="fas fa-users"></i> Междисциплинарный проект</span>
+                <span><i class="fas fa-book-open"></i> История · Английский · Информационные технологии</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Навигационное меню -->
+    <nav class="nav">
+        <div class="container">
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="chapter1.html">Глава 1</a></li>
+                <li><a href="chapter2.html">Глава 2</a></li>
+                <li><a href="chapter3.html">Глава 3</a></li>
+                <li><a href="conclusion.html">Заключение</a></li>
+                <li><a href="literature.html">Литература</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        <div class="project-title">
+            <h2>Глава 3. Современность страхования в России:<br>цифры, лидеры и технологии</h2>
+        </div>
+
+        <div class="content">
+
+            <h3 id="31">3.1 Структура и количественные параметры страхового рынка (2000-2020 гг.)</h3>
+            <p>К 2020 году страхование жизни окончательно закрепилось в качестве одного из главных драйверов роста всего страхового рынка России. Несмотря на пандемию COVID-19 и экономический спад, именно этот сегмент продемонстрировал выдающиеся результаты, обеспечив основную часть прироста совокупных страховых премий.</p>
+            <p><strong>Объём рынка.</strong> По итогам 2020 года страховщики жизни собрали 541,3 млрд рублей премий. Рынок восстановился после провала первого полугодия, когда из-за пандемии сборы снижались, и завершил год с положительной динамикой. Ключевую роль сыграло активное продвижение продуктов накопительного страхования жизни (НСЖ) банковским каналом, а также страхование жизни заёмщиков на фоне бума ипотечного кредитования.</p>
+
+            <h4>Лидеры рынка страхования жизни в 2020 году:</h4>
+            <ul>
+                <li><strong>СОГАЗ-ЖИЗНЬ</strong> — совершила самый мощный рывок: сборы выросли на 66,2% (до 76,1 млрд руб.) благодаря приобретению портфеля «ВТБ Страхование жизни».</li>
+                <li><strong>РСХБ-Страхование жизни</strong> — поднялась с 13-го на 7-е место, рост сборов в 1,9 раза.</li>
+                <li><strong>Сбербанк страхование жизни</strong> — исторический лидер, но сборы упали на 30,8% из-за насыщения рынка ИСЖ.</li>
+                <li><strong>АльфаСтрахование-Жизнь</strong> — укрепила позиции, вошла в десятку крупнейших страховщиков России.</li>
+                <li><strong>Ренессанс Жизнь</strong> — ворвалась в ТОП-10, показав кратный рост.</li>
+                <li><strong>Капитал Life</strong> — вошла в группу лидеров роста.</li>
+                <li><strong>Ингосстрах-Жизнь</strong> — сохранила устойчивые позиции в десятке.</li>
+            </ul>
+
+            <h3 id="32">3.2 Ключевые сегменты: ОСАГО, КАСКО, ДМС (анализ фактических данных)</h3>
+            <h4>Автострахование (ОСАГО и КАСКО)</h4>
+            <p>Несмотря на падение продаж новых автомобилей в 2020 году на 9,1%, рынок автострахования удержался за счёт роста количества договоров и изменения тарифов. В совокупности на каско и ОСАГО приходится 35% всех страховых сборов в России, а в регионах этот показатель достигает 45%.</p>
+            <p><strong>ОСАГО:</strong> лидером является «РЕСО-Гарантия»: за 9 месяцев 2020 года заключено 4,36 млн договоров, сборы 27,33 млрд руб. (+19,1%), выплаты снизились на 8,6%. Другие крупные игроки: «АльфаСтрахование», «Ингосстрах», «Росгосстрах» (узнаваемость бренда 83%).</p>
+            <p><strong>КАСКО:</strong> «РЕСО-Гарантия» оформила 453,6 тыс. договоров, сборы 19,85 млрд руб. (+6,9%), выплаты снизились на 0,4%. В целом по рынку сборы по каско выросли на 1,2–3%.</p>
+            <p><strong>ИТ-технологии в автостраховании:</strong> снижение выплат при росте сборов — следствие внедрения цифровых систем. «Ингосстрах» приобрёл Low-Code Platform, ВСК запустила Telegram-бота. Конкуренция смещается в технологическую плоскость.</p>
+
+            <h4>Медицинское страхование (ДМС)</h4>
+            <p>2020 год стал стресс-тестом для ДМС: количество договоров рухнуло на 37% (до 10,7 млн), но сборы снизились всего на 2% (до 177 млрд руб.). Доля физических лиц упала с 19,9% до 12,3%, корпоративный сегмент вырос до 87,7%. Средняя цена полиса выросла на 55,5% (до 16,5 тыс. руб.) из-за удорожания медуслуг и включения тестирования на COVID-19.</p>
+
+            <h4>Лидеры рынка ДМС в 2020 году:</h4>
+            <table>
+                <tr><th>Компания</th><th>Сборы / динамика</th><th>Доля рынка</th><th>Особенности</th></tr>
+                <tr><td>«СОГАЗ»</td><td>64,4 млрд руб. (+6,8%)</td><td>36,4%</td><td>Абсолютный лидер, укрепил позиции</td></tr>
+                <tr><td>«ВСК»</td><td>+27,5%</td><td>Лучшая динамика в ТОП-10</td><td>Запустил продукты «Индивидуальная защита» и «Реабилитация после COVID-19»</td></tr>
+                <tr><td>«РЕСО-Гарантия»</td><td>+37% (предв. итог)</td><td>—</td><td>Рекордный рост сборов по ДМС</td></tr>
+                <tr><td>«АльфаСтрахование»</td><td>+20%</td><td>—</td><td>Уверенный рост в кризис</td></tr>
+                <tr><td>«Ингосстрах»</td><td>-5,9%</td><td>—</td><td>Сознательная реструктуризация портфеля</td></tr>
+                <tr><td>«Росгосстрах»</td><td>Выполнение плана</td><td>—</td><td>Существенный рост розничных продаж ДМС</td></tr>
+            </table>
+
+            <h3 id="33">3.3 Ведущие страховые компании и рыночные доли (2020 г.)</h3>
+            <p>К 2020 году на российском страховом рынке сложилась олигополия. После присоединения группы «ВТБ Страхование» к группе «СОГАЗ» последняя стала крупнейшим игроком с долей 26% совокупного рынка. Пятёрка лидеров контролирует более 50% рынка.</p>
+
+            <table>
+                <tr><th>Место</th><th>Компания</th><th>Сборы (9 мес. 2020 / 2020)</th><th>Доля рынка</th><th>Специализация</th></tr>
+                <tr><td>1</td><td>«СОГАЗ»</td><td>—</td><td>26% (с учётом ВТБ)</td><td>ДМС (36,4%), имущество юрлиц (57%), НС (50%)</td></tr>
+                <tr><td>2</td><td>«АльфаСтрахование»</td><td>—</td><td>~7-8%</td><td>Универсальный страховщик</td></tr>
+                <tr><td>3</td><td>«Ингосстрах»</td><td>—</td><td>~7%</td><td>Универсальный, развивает low-code платформы</td></tr>
+                <tr><td>4</td><td>«РЕСО-Гарантия»</td><td>77,4 млрд руб. (9 мес.)</td><td>~7%</td><td>Лидер по ОСАГО и КАСКО</td></tr>
+                <tr><td>5</td><td>«Росгосстрах»</td><td>—</td><td>~6-7%</td><td>Высшая узнаваемость бренда (83%)</td></tr>
+                <tr><td colspan="5"><em>Лидеры в страховании жизни:</em></td></tr>
+                <tr><td>—</td><td>«Сбербанк страхование жизни»</td><td>падение 30,8%</td><td>Крупнейший в life</td><td>Потеря доли рынка</td></tr>
+                <tr><td>—</td><td>«СОГАЗ-ЖИЗНЬ»</td><td>76,1 млрд руб. (+66,2%)</td><td>Рекордный рост</td><td>Приобрела портфель ВТБ</td></tr>
+            </table>
+
+            <p><strong>Динамика количества игроков:</strong> рынок активно консолидируется. В 2019 году — 121 компания в ДМС, к концу 2020 — 104. За 2020 год 4 компании покинули рынок из-за санкций, 9 отказались от лицензий.</p>
+            <p><strong>Индекс доверия:</strong> самую высокую узнаваемость имеют старые бренды: «Росгосстрах» — 83%, «Ингосстрах» — 71%.</p>
+            <p><strong>Каналы продаж:</strong> банки остаются крупнейшим каналом — 38% премий (34,7 млрд руб.). Пандемия усилила онлайн-каналы.</p>
+
+            <!-- Видео: ИСПРАВЛЕННЫЙ ПУТЬ (без первого слеша) -->
+            <div style="margin-top: 40px; text-align: center;">
+                <h4>Дополнительные материалы</h4>
+                <video width="100%" max-width="640" controls>
+                    <source src="static/12.mp4" type="video/mp4">
+                    Ваш браузер не поддерживает видео.
+                </video>
+            </div>
+
+            <div style="text-align: right; margin-top: 32px;">
+                <a href="index.html" class="btn-more"><i class="fas fa-arrow-left"></i> На главную</a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Подвал -->
+    <footer class="footer">
+    <div class="container">
+        <div>© 2026 Междисциплинарный проект | Астраханский государственный университет им. В.Н. Татищева</div>
+        <div>
+            <a href="#"><i class="fab fa-github"></i></a>   
+            <a href="#"><i class="fab fa-telegram"></i></a>   
+            <a href="chapter3_en.html">english version</a>   <!-- добавьте эту строку -->
+        </div>
+    </div>
+</footer>
